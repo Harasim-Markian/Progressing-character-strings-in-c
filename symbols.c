@@ -31,17 +31,17 @@ int main(void)
 
     for(int i = 0; read[i] != '\0'; i++)
     {
-        if (read[i] == '{')
+        if (read[i] == '(')
         {
             elements = 1;
         }
-        else if (read[i] == '}')
+        else if (read[i] == ')')
         {
             elements = 0;
         }
         else if (elements)
         {
-            printf("Symbol in {} : %c  Numerical value : %d\n", read[i] , read[i]);  
+            printf("Symbol in () : %c  Numerical value : %d\n", read[i] , read[i]);  
             sums += read[i];
         } 
     }
@@ -49,6 +49,6 @@ int main(void)
     printf("\n");
     printf("Sums numerical values = %d\n", sums); 
    
-    return 0;
+   return 0;
 
 }
